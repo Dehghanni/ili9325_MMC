@@ -1,0 +1,78 @@
+RAM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+FatFs                                                                             0x0488       2
+CardType                                                                          0x048A       1
+highlight_color                                                                   0x048B       2
+x_base                                                                            0x048D       2
+x_text                                                                            0x048F       1
+y_text                                                                            0x0490       1
+buffer                                                                            0x0491     721
+Fs                                                                                0x0762      44
+w_br                                                                              0x078E       2
+res                                                                               0x0790       1
+y                                                                                 0x0791       4
+ADDR                                                                              0x0795       2
+i1                                                                                0x0797       2
+r                                                                                 0x0799       1
+g                                                                                 0x079A       1
+b                                                                                 0x079B       1
+color                                                                             0x079C       4
+tcolor                                                                            0x07A0       4
+count                                                                             0x07A4       1
+_seed                                                                             0x07A5       4
+
+EEPROM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+
+Register Allocation
+Variable                                                                          Register  Size
+------------------------------------------------------------------------------------------------
+font_color                                                                        R4,R5        2
+x_font                                                                            R6,R7        2
+y_font                                                                            R8,R9        2
+highlight                                                                         R11          1
+fa_num                                                                            R10          1
+effect                                                                            R13          1
+italic                                                                            R12          1
+
+FLASH Allocation [words]
+Function                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+mem_set_G000                                                                      0x00CE6     25
+mem_cmp_G000                                                                      0x00CFF     38
+get_fat_G000                                                                      0x00D25    214
+clust2sect_G000                                                                   0x00DFB     61
+dir_rewind_G000                                                                   0x00E38     82
+dir_next_G000                                                                     0x00E8A    116
+dir_find_G000                                                                     0x00EFE     77
+create_name_G000                                                                  0x00F4B    107
+follow_path_G000                                                                  0x00FB6    115
+check_fs_G000                                                                     0x01029     54
+pf_mount                                                                          0x0105F    382
+pf_open                                                                           0x011DD    126
+pf_read                                                                           0x0125B    247
+pf_lseek                                                                          0x01352    242
+init_spi                                                                          0x01444     12
+rcv_spi                                                                           0x01450      6
+release_spi_G000                                                                  0x01456      3
+send_cmd_G000                                                                     0x01459     80
+disk_initialize                                                                   0x014A9    145
+disk_readp                                                                        0x0153A     97
+lcd_write_index_register                                                          0x0159B      8
+lcd_write_wdr                                                                     0x015A3     12
+lcd_read_rdr                                                                      0x015AF     29
+lcd_clear_screen                                                                  0x015CC     12
+lcd_background_color                                                              0x015D8     13
+lcd_init                                                                          0x015E5    230
+lcd_write_pixel                                                                   0x016CB     16
+lcd_read_pixel                                                                    0x016DB     20
+lcd_draw_line                                                                     0x016EF    135
+lcd_draw_rectangle                                                                0x01776    101
+lcd_draw_circle                                                                   0x017DB    150
+lcd_putchar                                                                       0x01871    101
+lcd_putsf                                                                         0x018D6     27
+lcd_gotoxy                                                                        0x018F1     43
+showbmp                                                                           0x0191C    147
+main                                                                              0x019AF    388
