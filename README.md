@@ -27,6 +27,10 @@ To those who want to assemble the project before understanding the codes and stu
     
 Assemble the circuit as shown in the schematic file.
 And also there is a picture of the assembled project to know how it would be like.
+
+
+<img src="https://github.com/Dehghanni/ili9325_MMC/blob/master/Assembled.jpg" alt="Schematic" width="400" height="300" border="10" /><img src="https://github.com/Dehghanni/ili9325_MMC/blob/master/Schematic.png" alt="Schematic" width="400" height="300" border="10" />
+
 Finally you can program the microcontroller by the provided hex file and put your pictures on the SD card and hook it up. (Notice that you have to format your memory card in __fat32__)
 
 Turn it on and enjoy ;)
