@@ -33,4 +33,12 @@ And also there is a picture of the assembled project to know how it would be lik
 
 Finally you can program the microcontroller by the provided hex file and put your pictures on the SD card and hook it up. (Notice that you have to format your memory card in __fat32__)
 
+Some dependencies are included that are licensed under different terms:
+
+http://elm-chan.org/fsw/ff/00index_e.html
+
+You can download the pff library files from here:
+
+http://soran111.persiangig.com/document/SD_Driver.rar/dl
+
 Turn it on and enjoy ;)
