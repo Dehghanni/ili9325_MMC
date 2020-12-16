@@ -1,7 +1,7 @@
 /*
 -------------------------------Colorful Graphic Display beside MMC-----------------------------------
 
-by : MOHAMMAD DEHGHANI         (m.dehghani94@live.com)
+by : MOHAMAD DEHGHANI         (m.dehghani94@live.com)(m.dehghani94@gmail.com)
 
 LCD features : ili9325 (320*240)
                  and MMC/SD
