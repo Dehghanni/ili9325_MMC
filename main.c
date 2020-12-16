@@ -20,10 +20,10 @@ description:
 #define xtal 16000000
 
 //================================ LCD CONFIGURATIONS ======================================= 
- #define   PORTRAIT                /* It used in the "tftlcd_functions.h" library  
+ #define   PORTRAIT                /* It is defined in "tftlcd_functions.h" library  
                                                              ,you can change it to LANSCAPE*/
  
- //Define pins to connect to the display
+ //Define pins connected to the display
  #define LCD_CONTROLPORT_DDR  DDRD 
  #define LCD_CONTROLPORT_PORT PORTD
  #define LCD_CONTROLPORT_PIN  PIND 
@@ -61,7 +61,7 @@ description:
  //================================================================ 
 
  //declare your global variables here
- #define BUFFER_SIZE 721               //every row is 240 RGB pixels and 240*3=720
+ #define BUFFER_SIZE 721               //every row is 240 R G B pixels and 240*3=720
  unsigned char buffer[BUFFER_SIZE];    //The data of every row will be saved in this buffer
  FATFS Fs;                             
  WORD w_br;                            //used in pf_read function
