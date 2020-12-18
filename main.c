@@ -5,12 +5,12 @@ by : MOHAMAD DEHGHANI         (m.dehghani94@live.com)(m.dehghani94@gmail.com)
 
 LCD features : ili9325 (320*240)
                  and MMC/SD
-Processor features:    ATmega 32
+Processor features:    ATmega32
                         16 MHz clock
 description:
-    In this source we are going to run a SD card and a Graphic Display to show Pictures in bmp 24bits.
+    In this source we are going to run a SD card and a Graphic Display to show Pictures in bmp 24bits format.
 */
-#include <mega32a.h>   //header of ATmega32A
+#include <mega32a.h>   //Header of ATmega32A
 #include <delay.h>     //Header for making delays 
 #include <stdio.h>
 #include <pff.c>       //Headers used to read or write on MMC/SD cards 
@@ -71,7 +71,7 @@ description:
  unsigned long int x=0,y=0;
  unsigned char MYBUFFER[7]={0}; 
  unsigned int ADDR=0;                  //Address of data we want to read in bmp file
- unsigned int i1=0,i2=0,i3=0;               //Loop counters
+ unsigned int i1=0,i2=0,i3=0;          //Loop counters
  unsigned char r,g,b;                  //Used for merging pixel colors in bmp to an int number
  unsigned long int color=0,tcolor;
  unsigned char count=0xffff,count1=0;
@@ -79,23 +79,23 @@ description:
  
 /***declaration of subfunctions***/
   
-  unsigned long int bmp_height(void){        //subfunction to get bmp picture height
+  unsigned long int bmp_height(void){        //subfunction to get the height of bmp picture
     unsigned long int height;
-    pf_lseek(0x16);                          /* The bmp file contains much informations except 
-                                                pixels colors such as the volume and the height and 
-                                                the width of the pic and in address 0x16 there are 4 bytes show
-                                                the height of the bmp pic */
+    pf_lseek(0x16);                          /* The bmp file contains much information besides the  
+                                                pixels' colors such as the volume and the height and 
+                                                the width of the pic, and there are 4 bytes showing
+                                                the height of the bmp pic in address 0x16 */
     pf_read(&buffer,4,&w_br);
-    height=(long)buffer[3]*512+(long)buffer[2]*64+(long)buffer[1]+(long)buffer[0];//calculations
+    height=(long)buffer[3]*512+(long)buffer[2]*64+(long)buffer[1]+(long)buffer[0];  //calculations
     return height;   
   }  
   
   unsigned long int bmp_width(void){         //subfunction to get bmp picture width
     unsigned long int width=0;
-    pf_lseek(0x12);                         /* The bmp file contains much informations except 
-                                                pixels colors such as the volume and the height and 
-                                                the width of the pic and in address 0x12 there are 4 bytes show
-                                                the width of the bmp pic */
+    pf_lseek(0x12);                         /* The bmp file contains much information besides the 
+                                                pixels' colors such as the volume and the height and 
+                                                the width of the pic, and there are 4 bytes showing
+                                                the width of the bmp pic in address 0x12 */
     pf_read(&buffer,4,&w_br);
     width=(long)buffer[3]*512+(long)buffer[2]*64+(long)buffer[1]+(long)buffer[0]; //calculations
     return width;
