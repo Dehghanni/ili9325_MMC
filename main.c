@@ -116,13 +116,13 @@ description:
      lcd_write_index_register(TS_INS_START_ADY);
      lcd_write_wdr(0);
      for(y=0;y<321;y++){        //main loop to put the image
-                                //This is the fastest way to show the pic
+                                //This is the fastest way to show the picture
       lcd_write_index_register(TS_INS_GRAM_ADY);
       lcd_write_wdr(y);
       lcd_write_index_register(TS_INS_RW_GRAM);
       res=pf_read(&buffer,720,&w_br);
-      CS_LOW;                        //It defined in the header ==> CS--> 0 volt
-      RS_HIGH;                      //RS ---> 5 volt
+      CS_LOW;                        //It is defined in the header ==> CS pin --> 0 volt
+      RS_HIGH;                      //RS pin --> 5 volt
       
       for(i1=0;i1<720;i1+=3){           //convert 888 format to 565 .
           
@@ -158,7 +158,7 @@ SPCR=(0<<SPIE) | (0<<SPE) | (0<<DORD) | (0<<MSTR) | (0<<CPOL) | (0<<CPHA) | (0<<
  lcd_background_color(0xff80);      /*  Set the color of background, you can use
                                         COLOURCO website to get the colour scheme*/
  
- lcd_putsf("Designed by:",0x01ff,0,0xff80);    //Write on display(To see how it works refer to library)
+ lcd_putsf("Designed by:",0x01ff,0,0xff80);    // Write on display(To see how it works refer to library)
  lcd_gotoxy(0,1);                              // Change the cursur position
  lcd_putsf("    Mohammad Dehghani   ",0x01ff,0,0xff80);
  delay_ms(3000);
@@ -181,10 +181,10 @@ SPCR=(0<<SPIE) | (0<<SPE) | (0<<DORD) | (0<<MSTR) | (0<<CPOL) | (0<<CPHA) | (0<<
  lcd_gotoxy(0,6);
  while(pf_open("1.bmp")!=FR_OK)   delay_ms(100);
  delay_ms(1000);
- pf_lseek(0x0A);                         /* The bmp file contains much informations except 
-                                                pixels colors such as the volume and the height and 
-                                                the width of the pic and the pixel colour informations 
-                                                begin in address 0x10  */
+ pf_lseek(0x0A);                         /* The bmp file contains much information in addition to 
+                                                pixels' colors such as the volume and the height and 
+                                                the width of the pic, and the information about 
+                                                pixel's colour begins at the address 0x10  */
  pf_read(&buffer,4,&w_br);
  ADDR=(long)buffer[3]*512+(long)buffer[2]*64+(long)buffer[1]+(long)buffer[0]; //calculate address
  pf_lseek(ADDR);
@@ -223,7 +223,7 @@ SPCR=(0<<SPIE) | (0<<SPE) | (0<<DORD) | (0<<MSTR) | (0<<CPOL) | (0<<CPHA) | (0<<
 
 
 while (1)
-      {                 //It finished so play the 19,20,21,22 pictures again and again ...
+      {                 //It is finished, so let's play the pictures 19,20,21,22 repeatedly.
         
   //////////////////////////////////////////
  while(pf_mount(&Fs)!=FR_OK) delay_ms(100);
@@ -284,4 +284,4 @@ while (1)
 }
 
 
-/* this source is designed by MOHAMMAD DEHGHANI
+/* this source is programmed by MOHAMMAD DEHGHANI
