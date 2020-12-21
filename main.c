@@ -275,10 +275,6 @@ while (1)
  while(pf_mount(0)!=FR_OK )  delay_ms(100);       
       
 
-
-
-
-
 }
 
 }
