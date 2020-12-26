@@ -1,5 +1,5 @@
 /*
--------------------------------Colorful Graphic Display beside MMC-----------------------------------
+-------------------------------Colorful Graphic Display beside MMC----------------------------------- 
 
 Author : MOHAMAD DEHGHANI         (m.dehghani94@live.com)(m.dehghani94@gmail.com)
 
