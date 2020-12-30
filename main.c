@@ -208,7 +208,6 @@ SPCR=(0<<SPIE) | (0<<SPE) | (0<<DORD) | (0<<MSTR) | (0<<CPOL) | (0<<CPHA) | (0<<
  //lcd_background_color(BLACK); 
  while(pf_mount(0)!=FR_OK )  delay_ms(100);
  //////////////////////////////////////////
- 
       
       lcd_clear_screen();
       lcd_background_color(BLACK);
